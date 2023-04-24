@@ -34,7 +34,7 @@ The host agents at the servers then decapsulate the packets and send the origina
 Copy your p4 code from Project 3 (the ECMP Routing Project). This code does not need to be changed for this project.
 
 ## Routing Controller
-We provided you a routing controller called `routing-controller.py`. This controller currently should be able to write ECMP routing rules for networks of switches running ECMP p4 code. You can test this you by changing up the topology (changing the json file that specifies the topology) and running the same controller code. The `pingall` command should work.
+We provided you a routing controller called `routing-controller.py`. This controller currently should be able to write ECMP routing rules for networks of switches running ECMP p4 code. You can test this by changing up the topology (changing the json file that specifies the topology) and running the same controller code. The `pingall` command should work.
 
 For this project, we will modify the `route` function of `routing-controller.py`, so that we can forward all the packets whose destination is the VIP to the load balancers (h1 and h2).
 
