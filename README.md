@@ -73,7 +73,7 @@ In addition to the code, write up your project in a file that you add to your re
 
 The total grades is 100:
 
-- Code (correctness & significance; needs to demonstrate to us 10-15min): 80
+- Code (correctness & significance; needs to demonstrate to us 5-10min): 80
 - Write-up: 20
 
 *Direction 4 has different grading criteria; please refer to the corresponding README. If you choose direction 4, your final grade will be multiplied by 0.9.
