@@ -87,3 +87,8 @@ INT works by writing data that needs to be monitored into the packet header in t
 [Multi-Hop Route Inspection (MRI)](https://github.com/p4lang/tutorials/tree/master/exercises/mri)
 This is a scaled down version of INT. Does not work for larger amounts of hops, as ipv4 headers have a max length because of the ihl field.
 -->
+
+
+### Survey
+
+Please fill out the Canvas survey after completing this project. 2 extra points will be given once you have finished it. 
