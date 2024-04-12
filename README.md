@@ -89,6 +89,6 @@ This is a scaled down version of INT. Does not work for larger amounts of hops, 
 -->
 
 
-### Survey
+## Survey
 
 Please fill out the Canvas survey after completing this project. 2 extra points will be given once you have finished it. 
