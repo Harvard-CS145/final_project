@@ -230,16 +230,16 @@ You are expected to submit the following documents:
 
 ### Grading
 
-Since this is a final project, we set the total score as 90. You are encouraged to explore additional features to get additional scores. 
+You are encouraged to explore additional features to earn extra points. Please note that since this is a final project, your final score (including extra credits) will be multiplied by 0.9.
 
 - 30: For your description of how your load balancing system works in `report.md` and the extra credit.
 - 20: routing controller code
     - criteria: `pingall` should run smoothly, packets to VIP should be routed to `h1` and `h2` and split evenly among the two 
 - 20: load balancing code.
     - criteria: sniff packets destined to the VIP, encapsulate packets with IPinIP, route packets based on a hash of the 5 tuple
-- 20: host agent code/functionality of the whole system.
-    - criteria: sniff packets destined for the server, decapsulate IPinIP packets, forward onto the server, wget succeeds
-- 10 or more: Extra credits 
+- 30: host agent code/functionality of the whole system.
+    - criteria: sniff packets destined for the server, decapsulate IPinIP packets, forward onto the server, wget succeeds.
+- 10: Extra credits 
 - Deductions based on late policies
 
 ## Survey
