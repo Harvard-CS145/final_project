@@ -35,7 +35,7 @@ One can learn a lot from past failures. Cloud providers usually summarize the fa
 Pick any network outage postmotem and reproduce the similar/simplified problems in your mininet testbed based on the postmortem. 
 
 ## Direction 3:
-Another option is to read papers in networking and try to reproduce some results (see the [Stanford course blog](https://reproducingnetworkresearch.wordpress.com/) for examples). You can conslut Minlan if you need suggestions on papers of specific topics you are interested in from the lectures (e.g., congestion control, traffic engineering, network management, Ethernet, IP). 
+Another option is to read papers in networking and try to reproduce some results (see the [Stanford course blog](https://reproducingnetworkresearch.wordpress.com/) for examples). You can consult Minlan if you need suggestions on papers of specific topics you are interested in from the lectures (e.g., congestion control, traffic engineering, network management, Ethernet, IP). 
 
 ## Direction 4: Software load balancing (with a maximum of 90% of the score)
 You are highly encouraged to take exploratory directions in 1 and 3. However, if you prefer projects with detailed instructions, you can also try out the [Software load balancing project](LoadBalancing.md). Note that if you choose this project, you will only get 90% of the total score of this final project (Unless you get extra credits). 
