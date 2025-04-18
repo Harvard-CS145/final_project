@@ -14,6 +14,10 @@ In project 1, we implemented a static FatTree. You can think about how to suppor
 
 ### Implement spanning tree protocol and learning switches in Mininet
 
+Think of an L2 switch (e.g. the LAN ports of your home WiFi router) and a network of L2 switches. Our devices are plugged into such a network and they simply work since the switches implement L2 learning and spanning tree protocol.
+
+Beyond L2 learning and spanning tree, you can also extend this project to run a DHCP, a DNS server, and a network gateway in one of the "management" hosts in the network such that the newly plugged in devices can access the Internet beyond able to reach other hosts/devices in the network.
+
 ### Port link-state or distance vector protocols to FatTree setting in Mininet
 Our link-state and distance vector implementation in project 2 is a standalone program. Can you try porting it to the Mininet setting so that we can run it in the data center networks we construct?
 
