@@ -23,7 +23,7 @@ To start, clone this repository with submodules:
 `git clone --recurse-submodules <your repository>` 
 
 In this project, we will implement a software load balancer using [scapy](https://scapy.readthedocs.io/en/latest/), a packet parsing package in python.
-To install scapy, run `pip install scapy` in the terminal.
+If scapy is not already available on your VM, run `pip install scapy` in the terminal.
 
 ## High-level sketch of the implementation.
 As usual, we will use the k=4 fattree topology. We set `h1` and `h2` as load balancers, `h3-h12` as clients, and `h13-h16` as servers. We use 20.0.0.1 as our VIP.
