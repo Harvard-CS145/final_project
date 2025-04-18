@@ -17,11 +17,16 @@ To learn more about load balancing, please take a look at [Ananta](https://dl.ac
 
 
 ## Getting Started
+
+To start, clone this repository with submodules:
+
+`git clone --recurse-submodules <your repository>` 
+
 In this project, we will implement a software load balancer using [scapy](https://scapy.readthedocs.io/en/latest/), a packet parsing package in python.
 To install scapy, run `pip install scapy` in the terminal.
 
 ## High-level sketch of the implementation.
-As usual, we use the fattree topology. We set `h1` and `h2` as load balancers, `h3-h12` as clients, and `h13-h16` as servers. We use 20.0.0.1 as our VIP.
+As usual, we will use the k=4 fattree topology. We set `h1` and `h2` as load balancers, `h3-h12` as clients, and `h13-h16` as servers. We use 20.0.0.1 as our VIP.
 ![fattree_topo](./figures/fattree_labelled.png)
 
 When the client sends packets to the VIP (20.0.0.1), the switches need to forward them to the load balancers and use ECMP to split packets among the load balancers (`h1` and `h2`).
@@ -31,7 +36,9 @@ Each instance of load balancers listens for packets in the network with destinat
 The host agents at the servers then decapsulate the packets and send the original packets to corresponding local server. The server then directly sends responses back to the clients without going through the load balancers (i.e., direct server return).
 
 ## Dataplane Code
-Copy your P4 code from Project 3 (the ECMP Routing Project). This code does not need to be changed for this project.
+We have provided you with `p4src/ecmp.p4` dataplane code. This code does not need to be changed for this project. However, note that the provided k=4 fattree with ecmp P4 switches runs a L3 network i.e. the IP addresses for the hosts are _not_ in the same IP subnet.
+<!-- Copy your P4 code from Project 3 (the ECMP Routing Project).  -->
+
 
 ## Routing Controller
 We provided you a routing controller called `routing-controller.py`. This controller currently should be able to write ECMP routing rules for networks of switches running ECMP P4 code. You can test this by changing up the topology (changing the json file that specifies the topology) and running the same controller code. The `pingall` command should work.
@@ -45,7 +52,7 @@ For this project, we will modify the `route` function of `routing-controller.py`
 ### Testing the Routing Controller
 #### Test 1
 ```
-sudo p4run --conf fat_tree_one_pod_app.json
+sudo p4run --conf fattree_app.json
 ```
 then run `pingall` in mininet. If all pings go through, then your routing should work for normal packet routing.
 #### Test 2
